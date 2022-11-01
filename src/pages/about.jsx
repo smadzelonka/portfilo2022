@@ -47,6 +47,13 @@ export default function About({ previousPathname }) {
           name="description"
           content="I’m Sean Madzelonka. I live in Dallas, Texas, where I design the future."
         />
+        <meta
+          property="og:url"
+          key="og:url"
+          content={process.env.NEXT_PUBLIC_SITE_URL}
+        />
+        <meta property="og:type" key="og:type" content="website" />
+        <link rel="canonical" href={process.env.NEXT_PUBLIC_SITE_URL} />
       </Head>
       <Container className="mt-16 sm:mt-32">
         <div className="grid grid-cols-1 gap-y-16 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:gap-y-12">
