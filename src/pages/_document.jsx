@@ -63,8 +63,44 @@ export default function Document() {
           key="og:image"
           content={`${process.env.NEXT_PUBLIC_SITE_URL}/avatar.jpg`}
         />
+        <meta property="og:image:width" content="1600" />
+        <meta property="og:image:height" content="900" />
         <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://seanmadzelonka.com" />
+        <meta
+          property="og:title"
+          content="Sean Madzelonka - Software designer, amateur astronaut, and travel
+          enthusiast"
+        />
+        <meta
+          property="og:description"
+          content="I’m Sean, a software designer and entrepreneur based in Dallas,
+            Texas. Looking for opportunities, where we develop technologies that
+            empower regular people to explore and develop on their own terms."
+        />
+        <meta
+          property="og:image"
+          content={`${process.env.NEXT_PUBLIC_SITE_URL}/avatar.jpg`}
+        />
 
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://metatags.io/" />
+        <meta
+          property="twitter:title"
+          content="Sean Madzelonka - Software designer, amateur astronaut, and travel
+          enthusiast"
+        />
+        <meta
+          property="twitter:description"
+          content="I’m Sean, a software designer and entrepreneur based in Dallas,
+            Texas. Looking for opportunities, where we develop technologies that
+            empower regular people to explore and develop on their own terms."
+        />
+        <meta
+          property="twitter:image"
+          content={`${process.env.NEXT_PUBLIC_SITE_URL}/avatar.jpg`}
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
