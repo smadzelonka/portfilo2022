@@ -60,9 +60,13 @@ export default function Document() {
         <meta
           property="og:image:secure_url"
           key="og:image"
-          content={`/avatar.jpg`}
+          content={'https://d39s6i1568tdna.cloudfront.net/avatar.jpg'}
         />
-        <meta property="og:image" key="og:image" content={`/avatar.jpg`} />
+        <meta
+          property="og:image"
+          key="og:image"
+          content={'https://d39s6i1568tdna.cloudfront.net/avatar.jpg'}
+        />
         <meta property="og:image:width" content="1600" />
         <meta property="og:image:height" content="900" />
         <link rel="icon" type="image/x-icon" href="/favicon.ico" />
@@ -79,7 +83,10 @@ export default function Document() {
             Texas. Looking for opportunities, where we develop technologies that
             empower regular people to explore and develop on their own terms."
         />
-        <meta property="og:image" content={`/avatar.jpg`} />
+        <meta
+          property="og:image"
+          content={'https://d39s6i1568tdna.cloudfront.net/avatar.jpg'}
+        />
 
         <meta property="twitter:card" content="summary_large_image" />
         <meta
@@ -98,7 +105,10 @@ export default function Document() {
             Texas. Looking for opportunities, where we develop technologies that
             empower regular people to explore and develop on their own terms."
         />
-        <meta property="twitter:image" content={`/avatar.jpg`} />
+        <meta
+          property="twitter:image"
+          content={'https://d39s6i1568tdna.cloudfront.net/avatar.jpg'}
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}

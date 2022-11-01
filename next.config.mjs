@@ -14,6 +14,9 @@ const nextConfig = {
   env: {
     NEXT_PUBLIC_SITE_URL: process.env.NEXT_PUBLIC_SITE_URL,
   },
+  images: {
+    domains: ['d39s6i1568tdna.cloudfront.net'],
+  },
 }
 
 // const withMDX = nextMDX({
