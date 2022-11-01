@@ -25,7 +25,7 @@ function Tool({ title, href, children }) {
   )
 }
 
-export default function Uses() {
+export default function Uses({ previousPathname }) {
   return (
     <>
       <Head>
@@ -36,6 +36,7 @@ export default function Uses() {
         />
       </Head>
       <SimpleLayout
+        previousPathname={previousPathname}
         title="Software I use, gadgets I love, and other things I recommend."
         intro="I get asked a lot about the things I use to build software, stay productive, or buy to fool myself into thinking I’m being productive when I’m really just procrastinating. Here’s a big list of all of my favorite stuff."
       >

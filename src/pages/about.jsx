@@ -38,7 +38,7 @@ function MailIcon(props) {
   )
 }
 
-export default function About() {
+export default function About({ previousPathname }) {
   return (
     <>
       <Head>
@@ -61,7 +61,8 @@ export default function About() {
             </div>
           </div>
           <div className="lg:order-first lg:row-span-2">
-            <Redirect />
+            {previousPathname && <Redirect />}
+
             <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
               I’m Sean Madzelonka. I live in Dallas, Texas, where I design the
               future.
