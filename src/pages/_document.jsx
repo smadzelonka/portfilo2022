@@ -39,7 +39,7 @@ const schemaData = {
   '@context': 'http://schema.org',
   '@type': 'Person',
   name: 'Sean Madzelonka',
-  url: 'http://seanmadzelonka.com',
+  url: 'https://seanmadzelonka.com',
   sameAs: [
     'https://www.facebook.com/sean.madzelonka',
     'https://twitter.com/seanmadzelonka?lang=en',
@@ -54,10 +54,14 @@ export default function Document() {
     <Html className="h-full antialiased" lang="en">
       <Head>
         <script dangerouslySetInnerHTML={{ __html: modeScript }} />
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-        <meta http-equiv="content-language" content="en" />
+        <meta httpEquiv="content-language" content="en" />
         {/* https://ogp.me/ */}
         <meta property="og:locale" key="og:locale" content="en_US" />
+        <meta
+          property="og:image:secure_url"
+          key="og:image"
+          content={`${process.env.NEXT_PUBLIC_SITE_URL}/avatar.jpg`}
+        />
         <meta
           property="og:image"
           key="og:image"
@@ -85,7 +89,11 @@ export default function Document() {
         />
 
         <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://metatags.io/" />
+        <meta
+          property="twitter:url"
+          content="Sean Madzelonka - Software designer, amateur astronaut, and travel
+          enthusiast"
+        />
         <meta
           property="twitter:title"
           content="Sean Madzelonka - Software designer, amateur astronaut, and travel

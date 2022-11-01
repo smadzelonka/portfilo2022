@@ -323,6 +323,7 @@ export default function Home() {
             Texas. Looking for opportunities, where we develop technologies that
             empower regular people to explore and develop on their own terms."
         />
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
       <Container className="mt-9">
         <div className="max-w-2xl">
