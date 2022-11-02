@@ -1,5 +1,5 @@
 // import { useEffect, useRef } from 'react'
-import { Suspense } from 'react'
+// import { Suspense } from 'react'
 import '@/styles/tailwind.css'
 import 'focus-visible'
 import { Footer } from '@/components/Footer'
@@ -127,9 +127,9 @@ export default function RootLayout({ children }) {
           </div>
         </div>
         <div className="relative">
-          <Suspense fallback={<Loading />}>
-            <Header />
-          </Suspense>
+          {/* <Suspense fallback={<Loading />}> */}
+          <Header />
+          {/* </Suspense> */}
           <main>
             {children}
             <Footer />

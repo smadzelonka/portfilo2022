@@ -1,13 +1,9 @@
+'use client'
 import Image from 'next/image'
 import Head from 'next/head'
 
 import { Card } from '@/components/Card'
 import { SimpleLayout } from '@/components/SimpleLayout'
-import flix from '@/images/logos/flix.svg'
-import twitterLogo from '@/images/logos/twitter.svg'
-import tamagotchi from '@/images/logos/tamagotchi.svg'
-import logoOpenShuttle from '@/images/logos/open-shuttle.svg'
-import er from '@/images/logos/er.svg'
 
 const projects = [
   {
@@ -70,7 +66,7 @@ function LinkIcon(props) {
   )
 }
 
-export default function Projects({ previousPathname }) {
+export default function Projects({ previousPathname = null }) {
   return (
     <>
       <Head>

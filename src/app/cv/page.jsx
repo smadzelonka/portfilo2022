@@ -1,7 +1,8 @@
+'use client'
 import Head from 'next/head'
 import { SimpleLayout } from '@/components/SimpleLayout'
 
-export default function CV({ previousPathname }) {
+export default function CV({ previousPathname = null }) {
   return (
     <>
       <Head>

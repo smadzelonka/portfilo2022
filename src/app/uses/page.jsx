@@ -1,3 +1,4 @@
+'use client'
 import Head from 'next/head'
 
 import { Card } from '@/components/Card'
@@ -25,7 +26,7 @@ function Tool({ title, href, children }) {
   )
 }
 
-export default function Uses({ previousPathname }) {
+export default function Uses({ previousPathname = null }) {
   return (
     <>
       <Head>

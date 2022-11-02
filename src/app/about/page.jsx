@@ -1,3 +1,4 @@
+'use client'
 import Image from 'next/image'
 import Head from 'next/head'
 import Link from 'next/link'
@@ -38,7 +39,7 @@ function MailIcon(props) {
   )
 }
 
-export default function About({ previousPathname }) {
+export default function About({ previousPathname = null }) {
   return (
     <>
       <Head>
