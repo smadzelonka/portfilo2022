@@ -1,4 +1,6 @@
+import { SimpleLayout } from '@/components/SimpleLayout'
+
 export default function Loading() {
   // You can add any UI inside Loading, including a Skeleton.
-  return <div>here....</div>
+  return <SimpleLayout title="Loading" />
 }

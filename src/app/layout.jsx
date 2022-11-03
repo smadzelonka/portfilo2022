@@ -1,5 +1,7 @@
+// 'use client'
 // import { useEffect, useRef } from 'react'
 // import { Suspense } from 'react'
+// import { usePathname } from 'next/navigation'
 import '@/styles/tailwind.css'
 import 'focus-visible'
 import { Footer } from '@/components/Footer'
@@ -55,7 +57,18 @@ const schemaData = {
   ],
 }
 
+// function usePrevious(value) {
+//   let ref = useRef()
+
+//   useEffect(() => {
+//     ref.current = value
+//   }, [value])
+
+//   return ref.current
+// }
+
 export default function RootLayout({ children }) {
+  // let previousPathname = usePrevious(usePathname())
   return (
     <html>
       <head>
