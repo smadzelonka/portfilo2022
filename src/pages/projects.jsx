@@ -13,7 +13,7 @@ const projects = [
   {
     name: 'Eagle Rose',
     description:
-      'Creating technology to empower civilians to explore space on their own terms.',
+      'Building houses, overseeing real estate, and displaying portfolios.',
     link: { href: 'https://eagle-rose.vercel.app/', label: 'EagleRose.com' },
     logo: er,
   },
