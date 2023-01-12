@@ -1,3 +1,4 @@
+'use client'
 import Image from 'next/image'
 import Head from 'next/head'
 
@@ -18,12 +19,6 @@ import two from '@/images/photos/two.png'
 import three from '@/images/photos/three.png'
 import four from '@/images/photos/four.png'
 import five from '@/images/photos/five.png'
-import jhm from '@/images/logos/jhm.svg'
-import er from '@/images/logos/er.svg'
-import msjc from '@/images/logos/msjc.svg'
-import ga from '@/images/logos/Ga.svg'
-import tamagotchi from '@/images/logos/tamagotchi.svg'
-import flix from '@/images/logos/flix.svg'
 
 function MailIcon(props) {
   return (
@@ -114,7 +109,14 @@ function Project({ project }) {
   return (
     <Card as="article">
       <div className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
-        <Image src={project.logo} alt="" className="h-8 w-8" unoptimized />
+        <Image
+          src={project.logo}
+          alt=""
+          className="h-8 w-8"
+          unoptimized
+          width="32"
+          height="32"
+        />
       </div>
       <h2 className="mt-6 text-base font-semibold text-zinc-800 dark:text-zinc-100">
         <Card.Link href={project.link.href}>{project.name}</Card.Link>
@@ -170,7 +172,7 @@ function Resume() {
     {
       company: 'Eagle Rose',
       title: 'Software Engineer',
-      logo: er,
+      logo: 'https://d39s6i1568tdna.cloudfront.net/logos/er.svg',
       start: '2022',
       end: {
         label: 'Present',
@@ -180,21 +182,21 @@ function Resume() {
     {
       company: 'MSJC',
       title: 'Student',
-      logo: msjc,
+      logo: 'https://d39s6i1568tdna.cloudfront.net/logos/msjc.svg',
       start: '2021',
       end: '2023',
     },
     {
       company: 'General Assembly',
       title: 'Student',
-      logo: ga,
+      logo: 'https://d39s6i1568tdna.cloudfront.net/logos/Ga.svg',
       start: '2021',
       end: '2022',
     },
     {
       company: 'JH Media',
       title: 'Media Specialists',
-      logo: jhm,
+      logo: 'https://d39s6i1568tdna.cloudfront.net/logos/jhm.svg',
       start: '2016',
       end: '2021',
     },
@@ -207,38 +209,46 @@ function Resume() {
         <span className="ml-3">Work</span>
       </h2>
       <ol className="mt-6 space-y-4">
-        {resume.map((role, roleIndex) => (
-          <li key={roleIndex} className="flex gap-4">
-            <div className="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
-              <Image src={role.logo} alt="" className="h-7 w-7" unoptimized />
-            </div>
-            <dl className="flex flex-auto flex-wrap gap-x-2">
-              <dt className="sr-only">Company</dt>
-              <dd className="w-full flex-none text-sm font-medium text-zinc-900 dark:text-zinc-100">
-                {role.company}
-              </dd>
-              <dt className="sr-only">Role</dt>
-              <dd className="text-xs text-zinc-500 dark:text-zinc-400">
-                {role.title}
-              </dd>
-              <dt className="sr-only">Date</dt>
-              <dd
-                className="ml-auto text-xs text-zinc-400 dark:text-zinc-500"
-                aria-label={`${role.start.label ?? role.start} until ${
-                  role.end.label ?? role.end
-                }`}
-              >
-                <time dateTime={role.start.dateTime ?? role.start}>
-                  {role.start.label ?? role.start}
-                </time>{' '}
-                <span aria-hidden="true">—</span>{' '}
-                <time dateTime={role.end.dateTime ?? role.end}>
-                  {role.end.label ?? role.end}
-                </time>
-              </dd>
-            </dl>
-          </li>
-        ))}
+        {resume &&
+          resume.map((role, roleIndex) => (
+            <li key={roleIndex} className="flex gap-4">
+              <div className="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
+                <Image
+                  src={role.logo}
+                  alt=""
+                  className="h-7 w-7"
+                  unoptimized
+                  width={28}
+                  height={28}
+                />
+              </div>
+              <dl className="flex flex-auto flex-wrap gap-x-2">
+                <dt className="sr-only">Company</dt>
+                <dd className="w-full flex-none text-sm font-medium text-zinc-900 dark:text-zinc-100">
+                  {role.company}
+                </dd>
+                <dt className="sr-only">Role</dt>
+                <dd className="text-xs text-zinc-500 dark:text-zinc-400">
+                  {role.title}
+                </dd>
+                <dt className="sr-only">Date</dt>
+                <dd
+                  className="ml-auto text-xs text-zinc-400 dark:text-zinc-500"
+                  aria-label={`${role.start.label ?? role.start} until ${
+                    role.end.label ?? role.end
+                  }`}
+                >
+                  <time dateTime={role.start.dateTime ?? role.start}>
+                    {role.start.label ?? role.start}
+                  </time>{' '}
+                  <span aria-hidden="true">—</span>{' '}
+                  <time dateTime={role.end.dateTime ?? role.end}>
+                    {role.end.label ?? role.end}
+                  </time>
+                </dd>
+              </dl>
+            </li>
+          ))}
       </ol>
       <Button
         href="/WedDevResume.pdf"
@@ -287,7 +297,7 @@ export default function Home() {
       description:
         'Building houses, overseeing real estate, and displaying portfolios.',
       link: { href: 'https://eagle-rose.vercel.app/', label: 'EagleRose.com' },
-      logo: er,
+      logo: 'https://d39s6i1568tdna.cloudfront.net/logos/er.svg',
     },
     {
       name: 'Flix Always',
@@ -297,7 +307,7 @@ export default function Home() {
         href: 'https://github.com/DoctorZulu/Stream-Helper',
         label: 'github.com',
       },
-      logo: flix,
+      logo: 'https://d39s6i1568tdna.cloudfront.net/logos/flix.svg',
     },
     {
       name: 'Tamagotchi',
@@ -307,7 +317,7 @@ export default function Home() {
         href: 'https://smadzelonka.github.io/Project_Zero/',
         label: 'github.com',
       },
-      logo: tamagotchi,
+      logo: 'https://d39s6i1568tdna.cloudfront.net/logos/tamagotchi.svg',
     },
   ]
   return (
@@ -366,9 +376,10 @@ export default function Home() {
             {/* {articles.map((article) => (
               <Article key={article.slug} article={article} />
             ))} */}
-            {projects.map((project) => (
-              <Project key={project.name} project={project} />
-            ))}
+            {projects &&
+              projects.map((project) => (
+                <Project key={project.name} project={project} />
+              ))}
           </div>
           <div className="space-y-10 lg:pl-16 xl:pl-24">
             <Newsletter />
