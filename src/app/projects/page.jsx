@@ -10,7 +10,7 @@ const projects = [
     name: 'Eagle Rose',
     description:
       'Building houses, overseeing real estate, and displaying portfolios.',
-    link: { href: 'https://eagle-rose.vercel.app/', label: 'EagleRose.com' },
+    link: { href: 'https://EagleRose.com', label: 'EagleRose.com' },
     logo: 'https://d39s6i1568tdna.cloudfront.net/logos/er.svg',
   },
   {
