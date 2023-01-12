@@ -293,7 +293,7 @@ function Photos() {
 export default function Home() {
   const projects = [
     {
-      name: 'In Progress: Eagle Rose',
+      name: 'Eagle Rose',
       description:
         'Building houses, overseeing real estate, and displaying portfolios.',
       link: { href: 'https://EagleRose.com', label: 'EagleRose.com' },
