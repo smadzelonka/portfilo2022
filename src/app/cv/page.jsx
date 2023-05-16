@@ -16,7 +16,7 @@ export default function CV({ previousPathname = null }) {
         <div className="space-y-20">
           <iframe
             className="h-[800px] w-full"
-            src="/WedDevResume.pdf"
+            src="/SeanMadzelonkaDevOpsResume.pdf"
             id="resume"
             title="PDF in an i-Frame"
           />
