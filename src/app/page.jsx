@@ -183,15 +183,15 @@ function Resume() {
       company: 'Eagle Rose',
       title: 'Software Engineer',
       logo: 'https://d39s6i1568tdna.cloudfront.net/logos/er.svg',
-      start: '2022',
+      start: '2020',
       end: '2023',
     },
     {
       company: 'MSJC',
       title: 'Student',
       logo: 'https://d39s6i1568tdna.cloudfront.net/logos/msjc.svg',
-      start: '2021',
-      end: '2023',
+      start: '2022',
+      end: '2025',
     },
     {
       company: 'General Assembly',
